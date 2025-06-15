@@ -1,0 +1,45 @@
+samples:
+  ID:
+    - WT
+    - Casette
+    - OriLyt
+    - delNucFoci
+    - delCLIP
+  read_length:
+    read1: 151
+    read2: 151
+
+reference_info:
+  genome_aligner: star
+  genome_assembly: GRCh38
+  chrom_sizes: https://hgdownload2.soe.ucsc.edu/goldenPath/hg38/bigZips/p14/hg38.p14.chrom.sizes
+  reference_fasta: https://ftp.ebi.ac.uk/pub/databases/gencode/Gencode_human/release_45/GRCh38.primary_assembly.genome.fa.gz
+  reference_gtf: https://ftp.ebi.ac.uk/pub/databases/gencode/Gencode_human/release_45/gencode.v45.primary_assembly.annotation.gff3.gz
+  transcriptome_fasta: https://ftp.ebi.ac.uk/pub/databases/gencode/Gencode_human/release_45/gencode.v45.transcripts.fa.gz
+  viral_genome_assembly: HCMV_Toledo.fa
+  viral_genome_gtf: HCMV_Toledo.gff3
+  kmer_size: 12
+  max_mismatch: 0.1
+
+annotations:
+  species: Homo sapiens
+  genome_assembly: GRCh38
+  sources:
+    GENCODE: https://hgdownload2.soe.ucsc.edu/goldenPath/hg38/database/wgEncodeGencodeCompV45.txt.gz
+    RepeatMasker: https://hgdownload2.soe.ucsc.edu/goldenPath/hg38/database/rmsk.txt.gz
+    GtRNAdb: https://hgdownload2.soe.ucsc.edu/goldenPath/hg38/database/tRNAs.txt.gz
+    miRBase: https://mirbase.org/download/hsa.gff3
+  Rfam_sources:
+    family: https://ftp.ebi.ac.uk/pub/databases/Rfam/14.10/database_files/family.txt.gz
+    fasta_prefix: https://ftp.ebi.ac.uk/pub/databases/Rfam/14.10/fasta_files/
+    first_fasta: RF00001.fa.gz
+    last_fasta: RF04300.fa.gz
+
+preprocessing:
+    ra5: GUUCAGAGUUCUACAGUCCGACGAUC
+    ra3: TGGAATTCTCGGGTGCCAAGG
+    min_len: 20
+    max_len: 100
+    min_overlap: 12
+    min_quality: 25
+    max_diff_percent: 5
