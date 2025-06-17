@@ -1,0 +1,8 @@
+*.fa
+*.bam
+*.bai
+.DS_Store
+*.gz
+*.zst
+resources/refs
+resources/annotations
